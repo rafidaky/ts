@@ -1,17 +1,40 @@
-var movieTitle: any = "Amadeus";
+let movieTitle: string = "Amadeus";
 movieTitle = "Arrival";
-movieTitle = 9;
-movieTitle.splice();
-let x: any = 27;
-x = " jsdjsdh";
-x.aha();
-x();
+movieTitle = 9; // Type 'number' is not assignable to type 'string'.ts(2322)
+movieTitle.upper();
+
+let numCatLives: number = 9;
+numCatLives += 1;
+// numCatLives = "zero";
+
 let tvShow = "Game of Thrones";
-let thing: any = "hello";
-thing = 1;
+tvShow = "Last Of Us";
+tvShow = false;
+
+let gameOver: boolean = false;
+gameOver = true;
+gameOver = "true";
+
+let isFunny = false;
+isFunny = true;
+isFunny = "asd";
+
+// the any type
+// let thing: any = "hello";
+// thing = 1;
+// thing = false;
+// thing();
+// thing.toUpperCase();
+
+let thing = "hello";
+thing.akjsdkjshad();
 
 const movies = ["Arrival", "The Thing", "Aliens", "Amadeus"];
+
 let foundMovie: string;
-foundMovie = movies[2];
-// foundMovie();
-// foundMovie = 1;
+
+for (let movie of movies) {
+  if (movie === "Amadeus") {
+    foundMovie = "Amadeus";
+  }
+}

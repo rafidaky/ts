@@ -2,7 +2,7 @@
 // Make sure that "originalTitle" is optional and "title" is readonly
 
 type Movie = {
-  title: string;
+  readonly title: string;
   originalTitle?: string;
   director: string;
   releaseYear: number;
@@ -12,6 +12,7 @@ type Movie = {
     grossWorldwide: number;
   };
 };
+
 const dune: Movie = {
   title: "Dune",
   originalTitle: "Dune Part One",
@@ -41,6 +42,15 @@ const cats: Movie = {
 // For example...
 // getProfit(cats) => -21166652
 
-const getProfit = (movie: Movie): number => {
-  return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
-};
+// function getProfit(movie: Movie): number {
+//   return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
+// }
+
+// function getProfit(movie: Movie): number {
+//   const { grossWorldwide, budget } = movie.boxOffice;
+//   return grossWorldwide - budget;
+// }
+
+function getProfit({ boxOffice: { grossWorldwide, budget } }: Movie): number {
+  return grossWorldwide - budget;
+}

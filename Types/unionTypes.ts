@@ -1,7 +1,7 @@
 let age: number | string | boolean = 21;
-age = "22";
-age = 22;
-age = true;
+age = 23;
+age = "24";
+// age = true;
 
 type Point = {
   x: number;
@@ -14,13 +14,13 @@ type Loc = {
 };
 
 let coordinates: Point | Loc = { x: 1, y: 34 };
-coordinates = { lat: 34234.23423, long: 2323.2323 };
+coordinates = { lat: 321.123, long: 123.232 };
 
 function printAge(age: number | string): void {
   console.log(`You are ${age} years old`);
 }
 printAge(23);
-printAge("87");
+printAge("23");
 
 function calculateTax(price: number | string, tax: number) {
   if (typeof price === "string") {
@@ -29,23 +29,20 @@ function calculateTax(price: number | string, tax: number) {
   return price * tax;
 }
 
-// const stuff: any[] = [1, 2, 3, 4, true, "kahjsd", {}];
+// const stuff: any[] = [1, 2, 3, 4, true, "asdasd", {}];
 
 const stuff: (number | string)[] = [1, 2, "32"];
 
+// const stuff: number[] | string[] = [1, 2];
+
 const coords: (Point | Loc)[] = [];
-coords.push({ lat: 34234.23423, long: 2323.2323 });
-coords.push({ x: 1, y: 34 });
+coords.push({ lat: 321.123, long: 123.232 });
+coords.push({ x: 3, y: 1 });
 
-let zero: 0 = 0;
-// zero = 3;
-
-let hi: "hi" = "hi";
+const zero: 0 = 0;
 
 let mood: "Happy" | "Sad" = "Happy";
-
 mood = "Sad";
-mood = "Happy";
 // mood = "Angry";
 
 type DayOfWeek =
@@ -57,4 +54,5 @@ type DayOfWeek =
   | "Saturday"
   | "Sunday";
 
-let today: DayOfWeek = "Friday";
+let today: DayOfWeek = "Wednesday";
+//  today = "Weds";

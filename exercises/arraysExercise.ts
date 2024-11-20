@@ -3,14 +3,15 @@
 // **********************************************
 // Create an empty array of numbers called "ages":
 
-let ages: number[] = [];
+const ages: number[] = [];
 
 // **********************************************
 // ******************* PART 2 *******************
 // **********************************************
 // Create an array variable called gameBoard that starts as an empty array.
 // It should be typed to hold a 2 dimensional array of strings
-let gameBoard: string[][] = [[]];
+
+const gameBoard: string[][] = [];
 
 // **********************************************
 // ******************* PART 3 *******************
@@ -31,9 +32,5 @@ type Product = {
 // It should return the sum of all the products' prices
 
 function getTotal(products: Product[]): number {
-  let total;
-  products.map((product) => {
-    total += product;
-  });
-  return total;
+  return products.reduce((acc, cur) => acc + cur.price, 0);
 }

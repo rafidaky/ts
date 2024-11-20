@@ -1,12 +1,15 @@
 const activeUsers: string[] = [];
-activeUsers.push("sjdjshd");
 
-const ageList: number[] = [45, 56, 13];
+activeUsers.push("steven");
+activeUsers.push("Tony");
+// activeUsers.push(12);
+
+const ageList: number[] = [45, 12, 32];
 ageList[0] = 99;
-// ageList[0] = '99';
+// ageList[0] = "asd";
 
-// const bools: Array<boolean> = [];
-const bools: boolean[] = [];
+// const bools: boolean[] = [];
+const bools: Array<boolean> = [];
 
 type Point = {
   x: number;
@@ -14,15 +17,13 @@ type Point = {
 };
 
 const coords: Point[] = [];
-
 coords.push({ x: 23, y: 8 });
-// coords.push({ x: 23, y: "8" });
+// coords.push({  y: 8 });
 
-//multidimensional array
 const board: string[][] = [
-  ["X", "O", "x"],
-  ["X", "O", "x"],
-  ["X", "O", "x"],
+  ["X", "O", "X"],
+  ["X", "O", "X"],
+  ["X", "O", "X"],
 ];
-//three dimensional
-const demo: number[][][] = [[[1]]];
+
+const demo: number[][][] = [[[1], [2]]];
